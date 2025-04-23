@@ -1,0 +1,14 @@
+{
+  "version": 2,
+  "dgSpecHash": "ohH2wSVmtjY=",
+  "success": true,
+  "projectFilePath": "C:\\Users\\ahlhe\\OneDrive\\Software_Developement\\C#\\ServerWatch\\ServerWatch\\ServerWatch.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\ahlhe\\.nuget\\packages\\microsoft.net.illink.tasks\\8.0.15\\microsoft.net.illink.tasks.8.0.15.nupkg.sha512",
+    "C:\\Users\\ahlhe\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512",
+    "C:\\Users\\ahlhe\\.nuget\\packages\\microsoft.netcore.app.runtime.win-x64\\8.0.15\\microsoft.netcore.app.runtime.win-x64.8.0.15.nupkg.sha512",
+    "C:\\Users\\ahlhe\\.nuget\\packages\\microsoft.windowsdesktop.app.runtime.win-x64\\8.0.15\\microsoft.windowsdesktop.app.runtime.win-x64.8.0.15.nupkg.sha512",
+    "C:\\Users\\ahlhe\\.nuget\\packages\\microsoft.aspnetcore.app.runtime.win-x64\\8.0.15\\microsoft.aspnetcore.app.runtime.win-x64.8.0.15.nupkg.sha512"
+  ],
+  "logs": []
+}

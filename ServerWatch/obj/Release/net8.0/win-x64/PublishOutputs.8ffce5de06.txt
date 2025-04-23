@@ -1,0 +1,2 @@
+C:\Users\ahlhe\OneDrive\Software_Developement\C#\ServerWatch\ServerWatch\bin\Release\net8.0\win-x64\publish\ServerWatch.pdb
+C:\Users\ahlhe\OneDrive\Software_Developement\C#\ServerWatch\ServerWatch\bin\Release\net8.0\win-x64\publish\ServerWatch.exe

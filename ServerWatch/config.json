@@ -1,0 +1,8 @@
+{
+  "serverName": "Notepad",
+  "workingDir": "D:\\Program Files\\Notepad++",
+  "executable": "notepad++.exe",
+  "parameters": "",
+  "behavior": "restart",
+  "autostart": true
+}
