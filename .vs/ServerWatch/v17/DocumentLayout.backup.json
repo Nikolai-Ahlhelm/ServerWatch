@@ -1,0 +1,71 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "G:\\ServerWatch\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{DB358573-CABE-4AAD-9075-7FDAF14DAFF7}|ServerWatch\\ServerWatch.csproj|g:\\serverwatch\\serverwatch\\serverwatch.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DB358573-CABE-4AAD-9075-7FDAF14DAFF7}|ServerWatch\\ServerWatch.csproj|solutionrelative:serverwatch\\serverwatch.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DB358573-CABE-4AAD-9075-7FDAF14DAFF7}|ServerWatch\\ServerWatch.csproj|g:\\serverwatch\\serverwatch\\global.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{DB358573-CABE-4AAD-9075-7FDAF14DAFF7}|ServerWatch\\ServerWatch.csproj|solutionrelative:serverwatch\\global.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DB358573-CABE-4AAD-9075-7FDAF14DAFF7}|ServerWatch\\ServerWatch.csproj|g:\\serverwatch\\serverwatch\\config.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{DB358573-CABE-4AAD-9075-7FDAF14DAFF7}|ServerWatch\\ServerWatch.csproj|solutionrelative:serverwatch\\config.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "ServerWatch.cs",
+              "DocumentMoniker": "G:\\ServerWatch\\ServerWatch\\ServerWatch.cs",
+              "RelativeDocumentMoniker": "ServerWatch\\ServerWatch.cs",
+              "ToolTip": "G:\\ServerWatch\\ServerWatch\\ServerWatch.cs",
+              "RelativeToolTip": "ServerWatch\\ServerWatch.cs",
+              "ViewState": "AgIAABEAAAAAAAAAAAAQwCUAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-10T22:02:38.485Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "global.json",
+              "DocumentMoniker": "G:\\ServerWatch\\ServerWatch\\global.json",
+              "RelativeDocumentMoniker": "ServerWatch\\global.json",
+              "ToolTip": "G:\\ServerWatch\\ServerWatch\\global.json",
+              "RelativeToolTip": "ServerWatch\\global.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-05-10T22:02:35.798Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "config.json",
+              "DocumentMoniker": "G:\\ServerWatch\\ServerWatch\\config.json",
+              "RelativeDocumentMoniker": "ServerWatch\\config.json",
+              "ToolTip": "G:\\ServerWatch\\ServerWatch\\config.json",
+              "RelativeToolTip": "ServerWatch\\config.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-05-10T22:02:33.265Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

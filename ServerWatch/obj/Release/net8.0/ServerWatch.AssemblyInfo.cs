@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ServerWatch")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Release")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0.0+a8a81fff09542533d37bb361707586982d4f69b9")]
 [assembly: System.Reflection.AssemblyProductAttribute("ServerWatch")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ServerWatch")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

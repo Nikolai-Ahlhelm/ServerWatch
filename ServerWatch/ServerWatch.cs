@@ -12,6 +12,7 @@ public class ServerWatch
     PSLM.PSLM pslm;
     ProcessWatchdog _processWatchdog;
     bool _exitApp = false;
+    bool _initialStart = false;
 
 
     ServerWatch() // Constructor
@@ -23,11 +24,25 @@ public class ServerWatch
         {
             pslm.Info("[ServerWatch::ServerWatch] No config file -> creating template");
             CreateDefaultConfig(); // Create default config if not found
+            _initialStart = true; // Set initial start to true
         }
-        pslm.Info("[ServerWatch::ServerWatch] Loading config");
-        _config = LoadConfig(); // Load config from JSON
 
-        InitProcessWatchdog(this);
+        if (_initialStart)
+        {
+            pslm.Info("[ServerWatch::ServerWatch] This is the inital start or config was deleted.");
+            pslm.Warn("[SETUP] ===================================================");
+            pslm.Warn("[SETUP] Please edit the config.json file and restart the program.");
+            pslm.Warn("[SETUP] ===================================================");
+            Thread.Sleep(100000);
+        }
+        else
+        {
+            pslm.Info("[ServerWatch::ServerWatch] Loading config");
+            _config = LoadConfig(); // Load config from JSON
+            InitProcessWatchdog(this);
+        }
+
+            
 
 
     }
@@ -35,6 +50,12 @@ public class ServerWatch
     static int Main(string[] args) //Main Method
     {
         var serverWatch = new ServerWatch();
+
+        if (serverWatch._initialStart)
+        {
+            return 0; //Close application, because inital start
+        }
+
         serverWatch.pslm.Info("[ServerWatch::Main] Constructor finished");
         if (serverWatch._config.autostart) { serverWatch._processWatchdog.StartProcess(); }
         serverWatch.UserInputListener();
@@ -232,6 +253,7 @@ public class ProcessWatchdog
     {
         _serverWatch = serverWatch;
         _config = config;
+        _restartOnExit = config.autostart;
         pslm = logger;   
     }
 

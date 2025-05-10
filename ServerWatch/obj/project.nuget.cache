@@ -1,10 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "Fvv/7o9N4po=",
+  "dgSpecHash": "NtvBqqye530=",
   "success": true,
-  "projectFilePath": "/Users/nikolaiahlhelm/Documents/GitHub/ServerWatch/ServerWatch/ServerWatch.csproj",
+  "projectFilePath": "G:\\ServerWatch\\ServerWatch\\ServerWatch.csproj",
   "expectedPackageFiles": [
-    "/Users/nikolaiahlhelm/.nuget/packages/newtonsoft.json/13.0.3/newtonsoft.json.13.0.3.nupkg.sha512"
+    "C:\\Users\\ahlhe\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512"
   ],
   "logs": []
 }
