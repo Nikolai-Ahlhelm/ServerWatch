@@ -113,7 +113,7 @@ public class ServerWatch
 
     void CreateDefaultConfig()
     {
-        Console.WriteLine("Creating default config.");
+        pslm.Info("[ServerWatch::CreateDefaultConfig] Creating default config.");
         _config = new Config
         {
             serverName = "DefaultServer",
@@ -137,6 +137,7 @@ public class ServerWatch
         Console.WriteLine("[Start]   : Start Server");
         Console.WriteLine("[Stop]    : Stop Server");
         Console.WriteLine("[Restart] : Restart Server");
+        Console.WriteLine("[Reload]  : Reload Config");
         Console.WriteLine("[Help]    : Show this menu");
         Console.WriteLine("[Quit]    : Close ServerWatch");
         Console.Write("\n > ");
@@ -224,6 +225,8 @@ public class ProcessWatchdog
     PSLM.PSLM pslm;
     Process _process;
     ServerWatch _serverWatch;
+    bool _restartOnExit = false;
+    bool _stopServer = false;
 
     public ProcessWatchdog(ServerWatch serverWatch, Config config, PSLM.PSLM logger) // Constructor
     {
@@ -234,6 +237,12 @@ public class ProcessWatchdog
 
     public void StartProcess()
     {
+        if (_process != null && !_process.HasExited)
+        {
+            pslm.Warn("[ProcessWatchdog::StartProcess] Process is already running!");
+            return;
+        }
+        
         pslm.Info($"[ProcessWatchdog::StartProcess] Starting process: {_config.executable} {_config.parameters}");
 
         _process = new Process();
@@ -258,11 +267,20 @@ public class ProcessWatchdog
 
     public void StopProcess()
     {
+        if (_process == null || _process.HasExited)
+        {
+            pslm.Warn("[ProcessWatchdog::StopProcess] Process is not running!");
+            return;
+        }
         pslm.Debug("[ProcessWatchdog::StopProcess] Trying to kill process..");
         try
         {
             _process.Kill();
             pslm.Info("[ProcessWatchdog::StopProcess] Process killed");
+            _restartOnExit = false; // Disable automatic restart through event listener
+            pslm.Debug("[ProcessWatchdog::StopProcess] _restartOnExit set to false");
+            _stopServer = true; // Disable automatic restart through event listener
+            pslm.Debug("[ProcessWatchdog::StopProcess] _stopServer set to true");
         }
         catch (Exception ex)
         {
@@ -280,38 +298,46 @@ public class ProcessWatchdog
     void OnProcessExited(object sender, EventArgs e)
     {
         pslm.Crit("[ProcessWatcher::OnProcessExited] Process exited!");
-        ServerCrashMessage();
-
-        switch (_config.behavior.ToLower())
+        if(!_stopServer)
         {
-            case "restart":
-                Restart();
-                break;
-            case "stop":
-                Stop();
-                break;
-            case "manual":
-                Manual();
-                break;
-            case "notify":
-                Notify();
-                break;
-            default:
-                Restart();
-                break;
+            ServerCrashMessage();
         }
+        
+        if(_stopServer == false && _restartOnExit == true) // HIER CHECKEN OB RESTARTONEXIT ÜBERHAUPT GEBRACUHT WIRD!!
+        {
+            switch (_config.behavior.ToLower())
+            {
+                case "restart":
+                    Restart();
+                    break;
+                case "stop":
+                    Stop();
+                    break;
+                case "manual":
+                    Manual();
+                    break;
+                case "notify":
+                    Notify();
+                    break;
+                default:
+                    Restart();
+                    break;
+            }
+        }
+
+        
     }
 
     void Restart()
     {
         pslm.Info("[ProcessWatcher::Restart] Initiating restart..");
-        StartProcess();
+        RestartProcess();
     }
 
     void Stop()
     {
         pslm.Info("[ProcessWatcher::Stop] Stopping after process exit");
-
+        StopProcess();
     }
 
     void Manual()
