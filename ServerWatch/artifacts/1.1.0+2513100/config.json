@@ -1,8 +1,0 @@
-{
-  "serverName": "DefaultServer",
-  "workingDir": "C:\\Default\\Path",
-  "executable": "server.exe",
-  "parameters": "",
-  "behavior": "restart",
-  "autostart": true
-}

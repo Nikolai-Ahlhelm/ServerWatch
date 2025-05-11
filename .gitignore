@@ -1,0 +1,12 @@
+# Build results from VS
+ServerWatch/bin/
+ServerWatch/obj/
+
+# User-specific publish settings
+*.pubxml.user
+
+# User-specific project settings
+*.csproj.user
+
+# Sample config (should not be versioned)
+ServerWatch/config.json
