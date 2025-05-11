@@ -1,7 +1,0 @@
-G:\ServerWatch\ServerWatch\artifacts\1.1.0+2513100\ServerWatch.exe
-G:\ServerWatch\ServerWatch\artifacts\1.1.0+2513100\ServerWatch.dll
-G:\ServerWatch\ServerWatch\artifacts\1.1.0+2513100\ServerWatch.deps.json
-G:\ServerWatch\ServerWatch\artifacts\1.1.0+2513100\ServerWatch.runtimeconfig.json
-G:\ServerWatch\ServerWatch\artifacts\1.1.0+2513100\ServerWatch.pdb
-G:\ServerWatch\ServerWatch\artifacts\1.1.0+2513100\Newtonsoft.Json.dll
-G:\ServerWatch\ServerWatch\artifacts\1.1.0+2513100\PSLM.dll
